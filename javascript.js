@@ -140,6 +140,8 @@ function viewPathHistory(){
 			};
 			//centering the path
 			map.fitBounds(latlonBounds);
+			marker = new google.maps.Marker ( { position : path[0], map : map } );
+
 		}
 	);
 }

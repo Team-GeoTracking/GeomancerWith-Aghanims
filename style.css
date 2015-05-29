@@ -1,0 +1,141 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+    background: url("grid2.jpg");
+    padding-top: 100px;
+    padding-bottom: 50px;
+    -moz-box-shadow:    inset 0 0 80px #000000;
+    -webkit-box-shadow: inset 0 0 80px #000000;
+    box-shadow:         inset 0 0 80px #000000;
+    }
+
+/* GOOGLE MAP */
+#mapholder {
+	height: 400px;
+	width: 100%;
+	background-color: black;
+	margin-left: auto;
+  margin-right: auto;
+	border: solid;
+	border-width: 10px;
+	border-color: black;
+	border-radius: 3px;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* NAVBAR-BRAND */
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:12px !important; 
+    padding-bottom:0 !important;
+    height: 40px;
+}
+.navbar {min-height:40px !important;}
+
+/* NAVBAR-BRAND HOVER GLOW */
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:active {
+
+   -webkit-stroke-width: 5.3px;
+
+   -webkit-stroke-color: #FFFFFF;
+
+   -webkit-fill-color: #FFFFFF;
+
+   text-shadow: 2px 0px 20px white;
+
+   -webkit-transition: width 0.3s; /*Safari & Chrome*/
+
+   transition: width 0.3s;
+
+   -moz-transition: width 0.3s; /* Firefox 4 */
+
+   -o-transition: width 0.3s; /* Opera */
+
+   }
+
+/* REMOVE UNDERLINE OF LINK */
+.btn-link:hover, .btn-link:active {
+  text-decoration: none;
+}
+
+/*
+#location {
+	height: 400px;
+	width: 100%;
+	background-color: black;
+	margin-top: 10px;
+	margin-left: auto;
+  margin-right: auto;
+	border: solid;
+	border-width: 10px;
+	border-color: black;
+	border-radius: 3px;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+*/
+
+/* POSITION THE NAVBAR MENU ON THE RIGHT */
+.navbar-right {
+  padding-right: 70px;
+}
+
+/* REMOVE THE RESIZE FUNCTION OF TEXTAREA */
+textarea {
+  resize: none; 
+}
+
+.modal {
+  text-align: center;
+}
+
+.modal:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: " ";
+  height: 80%;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  width: 300px;
+}
+
+.btn-link {
+  color: black;
+}
+
+.glyphicon-map-marker {
+  color: red;
+}
+
+.glyphicon-screenshot {
+  color: green;
+}
+
+.glyphicon-flag {
+  color: blue;
+}
+
+.modal-header {
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #0480be;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+ }
+
+ h4 {
+  color: white;
+ }

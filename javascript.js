@@ -8,7 +8,6 @@ var mapholder = document.getElementById('mapholder');
 
 //watch position button
 function watchLocation(){
-	msg.html("Watching Location...");
 
 	if (gmap) {
 		//errormsg.html("Working");
@@ -68,8 +67,6 @@ function addPath() {
 }
 
 function savePath(){
-	msg.html("Saving Location...");
-
 	//string
 	obj = JSON.stringify(path);
 	console.log(obj);

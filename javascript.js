@@ -153,3 +153,33 @@ function viewPathHistory(){
 		}
 	);
 }
+
+
+
+function image(){
+	var image = document.getElementById('image').files[0];
+	console.log(image.name);
+	console.log(image.type);
+	console.log(image.size);
+
+	var pic = new FormData();    
+	pic.append( 'file', $('#image')[0].files[0] );
+	console.log(pic);
+	console.log(typeof pic);
+
+	//var name = $('input#username').val();
+
+	$.ajax({
+		url: 'image.php',
+		data: pic,
+		processData: false,
+		contentType: false,
+		type: 'POST',
+		success: function(data){
+			alert(data)
+			console.log('upload success!')
+			//$('#data').empty();
+			//$('#data').append(data);
+		}
+	});
+}

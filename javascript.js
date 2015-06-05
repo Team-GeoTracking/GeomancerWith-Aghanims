@@ -169,10 +169,9 @@ function image(){
 	console.log(typeof pic);
 
 	//var name = $('input#username').val();
-
 	$.ajax({
 		url: 'image.php',
-		data: pic,
+		data: pic ,
 		processData: false,
 		contentType: false,
 		type: 'POST',
@@ -216,20 +215,20 @@ function showNearbyPeople(pos) {
 	var map = new google.maps.Map(mapholder,myOptions);
 	
 	//place marker
-	marker[0] = new google.maps.Marker({position: latlon, map: map, icon : {url :"avatars/superman.png", anchor: new google.maps.Point(16, 14)}});
-	marker[1] = new google.maps.Marker({position: new google.maps.LatLng(14.586140295307683, 121.05801969766617), map: map, icon : {url : "avatars/captainamerica.png", anchor: new google.maps.Point(16, 14)}});
-	marker[2] = new google.maps.Marker({position: new google.maps.LatLng(14.586469956800912, 121.05791509151459), map: map, icon : {url : "avatars/flash.png", anchor: new google.maps.Point(16, 14)}});
-	marker[3] = new google.maps.Marker({position: new google.maps.LatLng(14.585933932153246, 121.05842538177967), map: map, icon : {url : "avatars/greenlantern.png", anchor: new google.maps.Point(16, 14)}});
-	marker[4] = new google.maps.Marker({position: new google.maps.LatLng(14.586719149413094, 121.05851590633392), map: map, icon : {url : "avatars/hulk.png", anchor: new google.maps.Point(16, 14)}});
-	marker[5] = new google.maps.Marker({position: new google.maps.LatLng(14.586397275569222, 121.05906307697296), map: map, icon : {url : "avatars/spiderman.png", anchor: new google.maps.Point(16, 14)}});
-	marker[6] = new google.maps.Marker({position: new google.maps.LatLng(14.585670461932832, 121.05895578861237), map: map, icon : {url : "avatars/thor.png", anchor: new google.maps.Point(16, 14)}});
-	marker[7] = new google.maps.Marker({position: new google.maps.LatLng(14.58547318353183, 121.05837643146515), map: map, icon : {url : "avatars/wolverine.png", anchor: new google.maps.Point(16, 14)}});
-	marker[8] = new google.maps.Marker({position: new google.maps.LatLng(14.586667234308827, 121.05904161930084), map: map, icon : {url : "avatars/batman.png", anchor: new google.maps.Point(16, 14)}});
-	marker[9] = new google.maps.Marker({position: new google.maps.LatLng(14.58663608524038, 121.05947077274323), map: map, icon : {url : "avatars/flash.png", anchor: new google.maps.Point(16, 14)}});
-	marker[10] = new google.maps.Marker({position: new google.maps.LatLng(14.58667761733065, 121.06015741825104), map: map, icon : {url : "avatars/hulk.png", anchor: new google.maps.Point(16, 14)}});
-	marker[11] = new google.maps.Marker({position: new google.maps.LatLng(14.585981953785064, 121.06081187725067), map: map, icon : {url : "avatars/wolverine.png", anchor: new google.maps.Point(16, 14)}});
-	marker[12] = new google.maps.Marker({position: new google.maps.LatLng(14.585950804619674, 121.05695888400078), map: map, icon : {url : "avatars/captainamerica.png", anchor: new google.maps.Point(16, 14)}});
-	marker[13] = new google.maps.Marker({position: new google.maps.LatLng(14.585140924772725, 121.05942785739899), map: map, icon : {url : "avatars/thor.png", anchor: new google.maps.Point(16, 14)}});
+	marker[0] = new google.maps.Marker({position: latlon, map: map, draggable : false ,title : "You",icon : {url :"avatars/superman.png", anchor: new google.maps.Point(16, 14)}});
+	marker[1] = new google.maps.Marker({position: new google.maps.LatLng(14.586140295307683, 121.05801969766617), map: map, title : "Captain America", icon : {url : "avatars/captainamerica.png", anchor: new google.maps.Point(16, 14)}});
+	marker[2] = new google.maps.Marker({position: new google.maps.LatLng(14.586469956800912, 121.05791509151459), map: map, title : "The Flash", icon : {url : "avatars/flash.png", anchor: new google.maps.Point(16, 14)}});
+	marker[3] = new google.maps.Marker({position: new google.maps.LatLng(14.585933932153246, 121.05842538177967), map: map, title : "Green Lantern", icon : {url : "avatars/greenlantern.png", anchor: new google.maps.Point(16, 14)}});
+	marker[4] = new google.maps.Marker({position: new google.maps.LatLng(14.586719149413094, 121.05851590633392), map: map, title : "Hulk", icon : {url : "avatars/hulk.png", anchor: new google.maps.Point(16, 14)}});
+	marker[5] = new google.maps.Marker({position: new google.maps.LatLng(14.586397275569222, 121.05906307697296), map: map, title : "Spiderman", icon : {url : "avatars/spiderman.png", anchor: new google.maps.Point(16, 14)}});
+	marker[6] = new google.maps.Marker({position: new google.maps.LatLng(14.58688787341748, 121.05797410011292), map: map, title : "Thor", icon : {url : "avatars/thor.png", anchor: new google.maps.Point(16, 14)}});
+	marker[7] = new google.maps.Marker({position: new google.maps.LatLng(14.58547318353183, 121.05837643146515), map: map, title : "Wolverine", icon : {url : "avatars/wolverine.png", anchor: new google.maps.Point(16, 14)}});
+	marker[8] = new google.maps.Marker({position: new google.maps.LatLng(14.586667234308827, 121.05904161930084), map: map, title : "Batman", icon : {url : "avatars/batman.png", anchor: new google.maps.Point(16, 14)}});
+	marker[9] = new google.maps.Marker({position: new google.maps.LatLng(14.58663608524038, 121.05947077274323), map: map, title : "Flash", icon : {url : "avatars/flash.png", anchor: new google.maps.Point(16, 14)}});
+	marker[10] = new google.maps.Marker({position: new google.maps.LatLng(14.58667761733065, 121.06015741825104), map: map, title : "Incredible Hulk", icon : {url : "avatars/hulk.png", anchor: new google.maps.Point(16, 14)}});
+	marker[11] = new google.maps.Marker({position: new google.maps.LatLng(14.585981953785064, 121.06081187725067), map: map, title : "Logan", icon : {url : "avatars/wolverine.png", anchor: new google.maps.Point(16, 14)}});
+	marker[12] = new google.maps.Marker({position: new google.maps.LatLng(14.585950804619674, 121.05695888400078), map: map, title : "Captain A", icon : {url : "avatars/captainamerica.png", anchor: new google.maps.Point(16, 14)}});
+	marker[13] = new google.maps.Marker({position: new google.maps.LatLng(14.586127316498624, 121.06099963188171), map: map, title : "God of Thunder", icon : {url : "avatars/thor.png", anchor: new google.maps.Point(16, 14)}});
 
 	var circleRadius = $('input#radius').val();
 

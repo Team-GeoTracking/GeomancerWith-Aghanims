@@ -197,9 +197,9 @@ function showNearby() {
 	};
 
 }
-var marker = [];
+
 function showNearbyPeople(pos) {
-	
+	var marker = [];
 	var lat = pos.coords.latitude;
 	var lon = pos.coords.longitude;
 	latlon = new google.maps.LatLng(lat,lon);
@@ -216,25 +216,25 @@ function showNearbyPeople(pos) {
 	var map = new google.maps.Map(mapholder,myOptions);
 	
 	//place marker
-	marker[0] = new google.maps.Marker({position: latlon, map: map, icon : "avatars/superman.png"});
-	marker[1] = new google.maps.Marker({position: new google.maps.LatLng(14.585870335922007, 121.0580076277256), map: map, icon : "avatars/captainamerica.png"});
-	marker[2] = new google.maps.Marker({position: new google.maps.LatLng(14.586469956800912, 121.05791509151459), map: map, icon : "avatars/flash.png"});
-	marker[3] = new google.maps.Marker({position: new google.maps.LatLng(14.585933932153246, 121.05842538177967), map: map, icon : "avatars/greenlantern.png"});
-	marker[4] = new google.maps.Marker({position: new google.maps.LatLng(14.586719149413094, 121.05851590633392), map: map, icon : "avatars/hulk.png"});
-	marker[5] = new google.maps.Marker({position: new google.maps.LatLng(14.586397275569222, 121.05906307697296), map: map, icon : "avatars/spiderman.png"});
-	marker[6] = new google.maps.Marker({position: new google.maps.LatLng(14.585670461932832, 121.05895578861237), map: map, icon : "avatars/thor.png"});
-	marker[7] = new google.maps.Marker({position: new google.maps.LatLng(14.58547318353183, 121.05837643146515), map: map, icon : "avatars/wolverine.png"});
-	marker[8] = new google.maps.Marker({position: new google.maps.LatLng(14.586667234308827, 121.05904161930084), map: map, icon : "avatars/batman.png"});
-	marker[9] = new google.maps.Marker({position: new google.maps.LatLng(14.58663608524038, 121.05947077274323), map: map, icon : "avatars/flash.png"});
-	marker[10] = new google.maps.Marker({position: new google.maps.LatLng(14.58667761733065, 121.06015741825104), map: map, icon : "avatars/hulk.png"});
-	marker[11] = new google.maps.Marker({position: new google.maps.LatLng(14.585981953785064, 121.06081187725067), map: map, icon : "avatars/wolverine.png"});
-	marker[12] = new google.maps.Marker({position: new google.maps.LatLng(14.585950804619674, 121.05695888400078), map: map, icon : "avatars/captainamerica.png"});
-	marker[13] = new google.maps.Marker({position: new google.maps.LatLng(14.585140924772725, 121.05942785739899), map: map, icon : "avatars/thor.png"});
+	marker[0] = new google.maps.Marker({position: latlon, map: map, icon : {url :"avatars/superman.png", anchor: new google.maps.Point(16, 14)}});
+	marker[1] = new google.maps.Marker({position: new google.maps.LatLng(14.586140295307683, 121.05801969766617), map: map, icon : {url : "avatars/captainamerica.png", anchor: new google.maps.Point(16, 14)}});
+	marker[2] = new google.maps.Marker({position: new google.maps.LatLng(14.586469956800912, 121.05791509151459), map: map, icon : {url : "avatars/flash.png", anchor: new google.maps.Point(16, 14)}});
+	marker[3] = new google.maps.Marker({position: new google.maps.LatLng(14.585933932153246, 121.05842538177967), map: map, icon : {url : "avatars/greenlantern.png", anchor: new google.maps.Point(16, 14)}});
+	marker[4] = new google.maps.Marker({position: new google.maps.LatLng(14.586719149413094, 121.05851590633392), map: map, icon : {url : "avatars/hulk.png", anchor: new google.maps.Point(16, 14)}});
+	marker[5] = new google.maps.Marker({position: new google.maps.LatLng(14.586397275569222, 121.05906307697296), map: map, icon : {url : "avatars/spiderman.png", anchor: new google.maps.Point(16, 14)}});
+	marker[6] = new google.maps.Marker({position: new google.maps.LatLng(14.585670461932832, 121.05895578861237), map: map, icon : {url : "avatars/thor.png", anchor: new google.maps.Point(16, 14)}});
+	marker[7] = new google.maps.Marker({position: new google.maps.LatLng(14.58547318353183, 121.05837643146515), map: map, icon : {url : "avatars/wolverine.png", anchor: new google.maps.Point(16, 14)}});
+	marker[8] = new google.maps.Marker({position: new google.maps.LatLng(14.586667234308827, 121.05904161930084), map: map, icon : {url : "avatars/batman.png", anchor: new google.maps.Point(16, 14)}});
+	marker[9] = new google.maps.Marker({position: new google.maps.LatLng(14.58663608524038, 121.05947077274323), map: map, icon : {url : "avatars/flash.png", anchor: new google.maps.Point(16, 14)}});
+	marker[10] = new google.maps.Marker({position: new google.maps.LatLng(14.58667761733065, 121.06015741825104), map: map, icon : {url : "avatars/hulk.png", anchor: new google.maps.Point(16, 14)}});
+	marker[11] = new google.maps.Marker({position: new google.maps.LatLng(14.585981953785064, 121.06081187725067), map: map, icon : {url : "avatars/wolverine.png", anchor: new google.maps.Point(16, 14)}});
+	marker[12] = new google.maps.Marker({position: new google.maps.LatLng(14.585950804619674, 121.05695888400078), map: map, icon : {url : "avatars/captainamerica.png", anchor: new google.maps.Point(16, 14)}});
+	marker[13] = new google.maps.Marker({position: new google.maps.LatLng(14.585140924772725, 121.05942785739899), map: map, icon : {url : "avatars/thor.png", anchor: new google.maps.Point(16, 14)}});
 
 	var circleRadius = $('input#radius').val();
 
 	if (circleRadius == "") {
-		circleRadius = 75;
+		circleRadius = 90;
 	};
 
 
@@ -253,6 +253,8 @@ function showNearbyPeople(pos) {
 			marker[i].setMap(null);
 		};
 	};
+
+	map.fitBounds(circle.getBounds());
 
 	// //return true if the marker is within circle else false
 	// var circlebounds = circle.getBounds().contains(marker[1].getPosition());

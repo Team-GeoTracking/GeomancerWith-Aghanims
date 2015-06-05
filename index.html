@@ -6,7 +6,7 @@
 	<style>
 		#mapholder {
 			margin: 0 auto;
-			height: 400px;
+			height: 500px;
 			width: 800px;
 		}
 	</style>
@@ -19,7 +19,8 @@
 	<button onclick="viewPathHistory()">View History</button>
 	<input type="file" id="image">
 	<button onclick="image()"> Upload </button>
-
+	<button onclick = "showNearby()"> Show Nearby </button>
+	<input type = "number" id = "radius" placeholder = "radius(50 - 200)">
 
 	<p id= "msg"></p>
 	<p id = "errormsg"></p>

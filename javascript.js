@@ -14,6 +14,7 @@ function watchLocation(){
 	if (gmap) {
 		//errormsg.html("Working");
 		gmap.watchPosition(showPosition);
+
 	} else{
 		errormsg.html("Not Working");
 	};
@@ -182,4 +183,92 @@ function image(){
 			//$('#data').append(data);
 		}
 	});
+}
+
+function showNearby() {
+	msg.html("Showing Nearby...");
+
+	if (gmap) {
+		//errormsg.html("Working");
+		gmap.getCurrentPosition(showNearbyPeople);
+		
+	} else{
+		errormsg.html("Not Working");
+	};
+
+}
+var marker = [];
+function showNearbyPeople(pos) {
+	
+	var lat = pos.coords.latitude;
+	var lon = pos.coords.longitude;
+	latlon = new google.maps.LatLng(lat,lon);
+
+	//path.push(latlon);
+	//map settings
+	var myOptions = {
+		center:latlon,
+		zoom:18,
+		mapTypeId:google.maps.MapTypeId.ROADMAP
+	}
+
+	//map creation
+	var map = new google.maps.Map(mapholder,myOptions);
+	
+	//place marker
+	marker[0] = new google.maps.Marker({position: latlon, map: map, icon : "avatars/superman.png"});
+	marker[1] = new google.maps.Marker({position: new google.maps.LatLng(14.585870335922007, 121.0580076277256), map: map, icon : "avatars/captainamerica.png"});
+	marker[2] = new google.maps.Marker({position: new google.maps.LatLng(14.586469956800912, 121.05791509151459), map: map, icon : "avatars/flash.png"});
+	marker[3] = new google.maps.Marker({position: new google.maps.LatLng(14.585933932153246, 121.05842538177967), map: map, icon : "avatars/greenlantern.png"});
+	marker[4] = new google.maps.Marker({position: new google.maps.LatLng(14.586719149413094, 121.05851590633392), map: map, icon : "avatars/hulk.png"});
+	marker[5] = new google.maps.Marker({position: new google.maps.LatLng(14.586397275569222, 121.05906307697296), map: map, icon : "avatars/spiderman.png"});
+	marker[6] = new google.maps.Marker({position: new google.maps.LatLng(14.585670461932832, 121.05895578861237), map: map, icon : "avatars/thor.png"});
+	marker[7] = new google.maps.Marker({position: new google.maps.LatLng(14.58547318353183, 121.05837643146515), map: map, icon : "avatars/wolverine.png"});
+	marker[8] = new google.maps.Marker({position: new google.maps.LatLng(14.586667234308827, 121.05904161930084), map: map, icon : "avatars/batman.png"});
+	marker[9] = new google.maps.Marker({position: new google.maps.LatLng(14.58663608524038, 121.05947077274323), map: map, icon : "avatars/flash.png"});
+	marker[10] = new google.maps.Marker({position: new google.maps.LatLng(14.58667761733065, 121.06015741825104), map: map, icon : "avatars/hulk.png"});
+	marker[11] = new google.maps.Marker({position: new google.maps.LatLng(14.585981953785064, 121.06081187725067), map: map, icon : "avatars/wolverine.png"});
+	marker[12] = new google.maps.Marker({position: new google.maps.LatLng(14.585950804619674, 121.05695888400078), map: map, icon : "avatars/captainamerica.png"});
+	marker[13] = new google.maps.Marker({position: new google.maps.LatLng(14.585140924772725, 121.05942785739899), map: map, icon : "avatars/thor.png"});
+
+	var circleRadius = $('input#radius').val();
+
+	if (circleRadius == "") {
+		circleRadius = 75;
+	};
+
+
+	// Add circle overlay
+	var circle = new google.maps.Circle({
+	  map: map,
+	  radius: parseFloat(circleRadius),
+	  fillColor: '#AA0000'
+	});
+	//bind the circle on marker
+	circle.bindTo('center', marker[0], 'position');
+
+	for (var i = 0; i < marker.length; i++) {
+		var circlebounds = circle.getBounds().contains(marker[i].getPosition());
+		if (!circlebounds) {
+			marker[i].setMap(null);
+		};
+	};
+
+	// //return true if the marker is within circle else false
+	// var circlebounds = circle.getBounds().contains(marker[1].getPosition());
+	// var circlebounds2 = circle.getBounds().contains(marker[2].getPosition());
+
+	// console.log(circlebounds);
+	// console.log(circlebounds2);
+
+
+	// if (!circlebounds) {
+	// 	marker[1].setMap(null);
+	// }
+
+	// if (!circlebounds2) {
+	// 	marker[2].setMap(null);
+	// }
+
+	//document.getElementById('coordinates').innerHTML = path;
 }
